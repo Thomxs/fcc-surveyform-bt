@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vos impressions sur LoL</title>
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <main>
+    <div id="titlebloc">
+      <h1 id="title">Votre expérience sur League of Legends</h1>
+      <p id="description">Ce questionnaire à pour but d'évaluer l'expérience en jeu.</p>
+    </div>
+    <form id="survey-form">
+
+      <div class="question">
+        <label for="name" class="titrequestion" id="name-label">Votre nom </label>
+        <input required type="text" id="name" class="boitereponse" name="Nom" placeholder="NOM Prénom" />
+      </div>
+
+      <div class="question">
+        <label for="email" class="titrequestion" id="email-label">Votre adresse mail </label>
+        <input required type="email" id="email" class="boitereponse" name="Nom" placeholder="adresse@mail.fr" />
+      </div>
+
+      <div class="question">
+        <label for="number" class="titrequestion" id="number-label">Votre numéro de téléphone</label>
+        <input required type="number" id="number" class="boitereponse" name="Nom" min="10" max="10"
+          pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="0X-XX-XX-XX-XX" />
+      </div>
+
+      <div class="question">
+        <label for="age" class="titrequestion" id="age-label">Votre âge </label>
+        <input required type="number" id="age" class="boitereponse" name="Age" min="10" max="100" />
+      </div>
+
+      <div class="question">
+        <p class="titrequestion">Quelle est votre ressenti général ?</p>
+        <select id="dropdown" class="boiteselection" name="ressenti" required>
+          <option disabled selected>Choisissez une option</option>
+          <option value="excellente">Excellente</option>
+          <option value="bonne">Bonne</option>
+          <option value="moyenne">Moyenne</option>
+          <option value="bof">Bof</option>
+          <option value="nul">Nul</option>
+        </select>
+      </div>
+
+      <div class="questionliste">
+        <p class="titrequestion">Qu'est-ce qui compte le plus selon vous</p>
+        <hr>
+        <label class="labelinput"><input name="compteleplus" value="amusement" type="radio"
+            checked="">L'amusement</label>
+        <label class="labelinput"><input name="compteleplus" value="competition" type="radio">La compétition</label>
+        <label class="labelinput"><input name="compteleplus" value="social" type="radio">Le social</label>
+        <label class="labelinput"><input name="compteleplus" value="univers" type="radio">L'univers/Le lore</label>
+        <label class="labelinput"><input name="compteleplus" value="boutique" type="radio">La boutique</label>
+      </div>
+
+      <div class="questionliste">
+        <p class="titrequestion">Qu'est-ce qui compte le moins selon vous</p>
+        <hr>
+        <label class="labelinput"><input name="comptelemoins" value="amusement" type="radio" checked>L'amusement</label>
+        <label class="labelinput"><input name="comptelemoins" value="competition" type="radio">La compétition</label>
+        <label class="labelinput"><input name="comptelemoins" value="social" type="radio">Le social</label>
+        <label class="labelinput"><input name="comptelemoins" value="univers" type="radio">L'univers/Le lore</label>
+        <label class="labelinput"><input name="comptelemoins" value="boutique" type="radio">La boutique</label>
+      </div>
+
+      <div class="questionliste">
+        <p class="titrequestion">Que changeriez-vous en jeu ?</p>
+        <hr>
+        <label class="labelinput"><input name="amelioration" value="jungle" type="checkbox">La jungle</label>
+        <label class="labelinput"><input name="amelioration" value="drake" type="checkbox">Le drake</label>
+        <label class="labelinput"><input name="amelioration" value="nashor" type="checkbox">Le nashor</label>
+        <label class="labelinput"><input name="amelioration" value="items" type="checkbox">Les objets</label>
+        <label class="labelinput"><input name="amelioration" value="minions" type="checkbox">Les minions</label>
+        <label class="labelinput"><input name="amelioration" value="tours" type="checkbox">Les tours</label>
+      </div>
+
+      <div class="question">
+        <p class="titrequestion">Expliquez vos choix ici</p>
+        <textarea name="changement" class="boitereponse" placeholder="Écrivez ici..."></textarea>
+      </div>
+
+      <div class="question">
+        <p class="titrequestion">Des commentaires ?</p>
+        <textarea name="commentaire" class="boitereponse" placeholder="Vous avez une suggestion ?"></textarea>
+      </div>
+
+      <div>
+        <button type="submit" id="submit">Envoyer</button>
+      </div>
+    </form>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <footer>
+    <p>Ce questionnaire n'entretient aucune relation avec les sociétés Riot Games et/ou le jeu League of Legends, il
+      s'agit d'un projet personnel.</p>
+  </footer>
+</body>
+
+</html>
